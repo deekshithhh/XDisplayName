@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Displayname() {
   const [firstname, setFirstname] = useState("");
@@ -7,8 +7,15 @@ export default function Displayname() {
 
   const isblank = (e) => {
     e.preventDefault();
-    setFullname(`${firstname}  ${lastname}`);
+    setFullname(`${firstname}  ${lastname}`)
+    
+    
   };
+
+  // useEffect(()=>{
+  //   (firstname && lastname)?
+  //     (setFullname(`${firstname}  ${lastname}`)): (setFullname(''))
+  // },[firstname,lastname])
   return (
     <div>
       <form onSubmit={isblank}>
@@ -35,7 +42,7 @@ export default function Displayname() {
         
       </form>
       {
-       <div>Full Name: {fullname}</div>
+       fullname?<div>Full Name: {fullname}</div>:<></>
       }
      
     </div>
