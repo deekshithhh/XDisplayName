@@ -7,18 +7,12 @@ export default function Displayname() {
 
   const isblank = (e) => {
     e.preventDefault();
-    setFullname(`${firstname}  ${lastname}`)
-    
-    
+    setFullname(`${firstname}  ${lastname}`)    
   };
 
-  // useEffect(()=>{
-  //   (firstname && lastname)?
-  //     (setFullname(`${firstname}  ${lastname}`)): (setFullname(''))
-  // },[firstname,lastname])
   return (
     <div>
-      <form onSubmit={isblank}>
+      <form >
         <h1>Full Name Display</h1>
         <label htmlFor="fname">First Name:</label>
         <input
@@ -37,14 +31,14 @@ export default function Displayname() {
           required
         />
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" oncl={isblank}>Submit</button>
         {/* <input type="submit" value="Submit" /> */}
         
       </form>
       {
        fullname?<div>Full Name: {fullname}</div>:<></>
       }
-     
-    </div>
+     </div>
+    
   );
 }
