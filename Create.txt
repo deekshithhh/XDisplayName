@@ -1,0 +1,1 @@
+This project implements a simple user interface with two text input fields for 'First Name' and 'Last Name'. A 'Submit' button is provided to concatenate the entered names and display the result as 'Full Name' directly on the webpage. The output is visible to the user and not merely logged to the console.
