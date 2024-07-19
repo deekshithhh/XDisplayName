@@ -33,7 +33,10 @@ export default function Displayname() {
         <button type="submit">Submit</button>
         {/* <input type="submit" value="Submit" /> */}
       </form>
-      <h3>Full Name: {fullname}</h3>
+      {
+        fullname&& <h3>Full Name: {fullname}</h3>
+      }
+     
     </div>
   );
 }
