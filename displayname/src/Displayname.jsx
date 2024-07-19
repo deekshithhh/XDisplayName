@@ -13,7 +13,7 @@ export default function Displayname() {
     <div>
       <form onSubmit={isblank}>
         <h1>Full Name Display</h1>
-        <label for="fname">First Name :</label>
+        <label for="fname">First Name:</label>
         <input
           type="text"
           required
@@ -21,7 +21,7 @@ export default function Displayname() {
           onChange={(e) => setFirstname(e.target.value)}
         />
         <br />
-        <label for="lname">Last Name :</label>
+        <label for="lname">Last Name:</label>
         <input
           type="text"
           id="lname"
@@ -30,8 +30,8 @@ export default function Displayname() {
           required
         />
         <br />
-
-        <input type="submit" value="Submit" />
+        <button type="submit">Submit</button>
+        {/* <input type="submit" value="Submit" /> */}
       </form>
       <h3>{fullname}</h3>
     </div>
